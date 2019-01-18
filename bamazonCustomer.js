@@ -58,7 +58,7 @@ let userChoice = function(response){
           if(answer.choice <= selectedProduct.stock_quantity){
             return inventory.purchase(selectedProduct, quantity);
           } 
-          return inventory.insufficient(selectedProduct, quantity);
+          return inventory.insufficient();
         });
       };
     };
@@ -83,14 +83,23 @@ let inventory = {
   },
   
   purchase: function(selectedProduct, quantity){
-    console.log("purchase")
 
+    connection.query("UPDATE products SET stock_quantity='" + (selectedProduct.stock_quantity - quantity) +"' WHERE product_name='" + selectedProduct.product_name + "'", function(error, response){
+
+      if(error) throw error;
+      console.log(`\nTransaction Total = $${(quantity * selectedProduct.price)} + tax\n`);
+      
+      // connection.query('SELECT * FROM products WHERE ?', { item_id: selectedProduct.item_id } , function(error, response){
+      //   console.log("")
+      // });
+
+      connection.end();
+    });
   },
 
-  insufficient: function(selectedProduct, quantity){
-    console.log("insufficient")
+  insufficient: function(){
 
-
+    console.log("\n The quantity that you entered is more than the amount in our inventory. Please try again. \n");
+    connection.end();
   },
-
 };
