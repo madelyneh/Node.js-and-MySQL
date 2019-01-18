@@ -16,20 +16,6 @@ connection.connect(function(error) {
   inventory.getInfo();
 });
 
-// let getInfo = function() {
-//   connection.query("SELECT * FROM products", function(error, response){
-
-//     if(error) throw error;
-//     console.log("------- Bamazon Inventory -------");
-
-//     for(let i = 0; i < response.length; i ++){
-//       console.log(response[i].item_id + ": " + response[i].product_name + " - " + response[i].department_name + " | Price: " + response[i].price + " | Quantity: " + response[i].stock_quantity);
-//     };
-
-//     console.log("\n");7
-//     userChoice(response);
-//   });
-// };
 
 let userChoice = function(response){
 
@@ -76,7 +62,7 @@ let inventory = {
         console.log(response[i].item_id + ": " + response[i].product_name + " - " + response[i].department_name + " | Price: " + response[i].price + " | Quantity: " + response[i].stock_quantity);
       };
   
-      console.log("\n");7
+      console.log("\n");
       userChoice(response);
     });
   },
