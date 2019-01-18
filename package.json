@@ -1,0 +1,20 @@
+{
+  "name": "Node.js-and-MySQL",
+  "version": "1.0.0",
+  "description": "## Overview",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madelyneh/Node.js-and-MySQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madelyneh/Node.js-and-MySQL/issues"
+  },
+  "homepage": "https://github.com/madelyneh/Node.js-and-MySQL#readme"
+}
