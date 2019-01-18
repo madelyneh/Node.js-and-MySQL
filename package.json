@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/madelyneh/Node.js-and-MySQL/issues"
   },
-  "homepage": "https://github.com/madelyneh/Node.js-and-MySQL#readme"
+  "homepage": "https://github.com/madelyneh/Node.js-and-MySQL#readme",
+  "dependencies": {
+    "inquirer": "^6.2.1"
+  }
 }
