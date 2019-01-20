@@ -81,7 +81,7 @@ let inventory = {
       };
 
       for(let i = 0; i < response.length; i ++){
-        console.log(response[i].item_id + ": " + response[i].product_name + " - " + response[i].department_name + " | Price: " + response[i].price + " | Quantity: " + response[i].stock_quantity);
+        console.log("\n" + response[i].item_id + ": " + response[i].product_name + " - " + response[i].department_name + " | Price: " + response[i].price + " | Quantity: " + response[i].stock_quantity + "\n");
       };
       return inventory.menu();
     });
@@ -131,6 +131,41 @@ let inventory = {
       message: "What is the name of the item you would like to add?",
     }]).then(answer => {
 
+      let name = answer.choice;
+
+      inquirer.prompt([{
+        type: "input",
+        name: "choice",
+        message: "Department name:",
+      }]).then(answer => {
+
+        let department = answer.choice;
+        
+        inquirer.prompt([{
+          type: "input",
+          name: "choice",
+          message: "Price:",
+        }]).then(answer => {
+          let price = answer.choice;
+          
+          inquirer.prompt([{
+            type: "input",
+            name: "choice",
+            message: "Quantity:",
+          }]).then(answer => {
+            let quantity = answer.choice;
+
+            connection.query(`INSERT INTO products (product_name, department_name, price, stock_quantity)
+            VALUES ("${name}", "${department}", ${price}, ${quantity})`, function(error, response){
+
+              if (error) throw error;
+              console.log("\n ** " + name + " - " + department + " | Price: " + price + " | Quantity: " + quantity + " ** \n *Has been added to inventory* \n");
+
+              inventory.menu();
+            });
+          });
+        });
+      });
     });
   },
 
