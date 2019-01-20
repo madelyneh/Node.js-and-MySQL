@@ -1,6 +1,8 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
 
+let productList;
+
 let connection = mysql.createConnection({
   host: "localhost",
   port: 8889,
@@ -31,6 +33,7 @@ let inventory = {
 
         case "View Products for Sale":
           inventory.view();
+          setTimeout(inventory.menu, 200);
           break;
 
         case "View Low Inventory":
@@ -38,7 +41,8 @@ let inventory = {
           break;
         
         case "Add to Inventory":
-          inventory.addQuantity();
+          inventory.view();
+          setTimeout(inventory.addQuantity, 200);
           break;
         
         case "Add New Product":
@@ -64,7 +68,7 @@ let inventory = {
       };
   
       console.log("\n");
-      inventory.menu();
+      productList = response;
     });
   },
 
@@ -84,12 +88,50 @@ let inventory = {
   },
 
   addQuantity: function(){
-    
 
+    inquirer.prompt([{
+      type: "input",
+      name: "choice",
+      message: "Which item do you want to add to? (Input item id)",
+    }]).then(answer => {
+
+    for(let i = 0; i<productList.length; i ++){
+      if(answer.choice == productList[i].item_id){
+        
+        let selectedProduct = productList[i];
+
+        console.log("\n ** " + selectedProduct.item_id + ": " + selectedProduct.product_name + " - " + selectedProduct.department_name + " | Price: " + selectedProduct.price + " | Quantity: " + selectedProduct.stock_quantity + " ** \n");
+
+        inquirer.prompt([{
+          type: "input",
+          name: "choice",
+          message: "How many of this item would you like to add to inventory?",
+        }]).then(answer => {
+
+          let quantity = ((parseInt(answer.choice)) + selectedProduct.stock_quantity);
+
+          connection.query("UPDATE products SET stock_quantity='" + quantity +"' WHERE item_id='" + selectedProduct.item_id + "'", function(error, response){
+
+            if(error) throw error;
+            
+            console.log("\n** Inventory has been updated **\n");
+            inventory.menu();
+          });
+        });
+      };
+     };
+    });
   },
 
   addProduct: function(){
 
+    inquirer.prompt([{
+      type: "input",
+      name: "choice",
+      message: "What is the name of the item you would like to add?",
+    }]).then(answer => {
+
+    });
   },
 
-}
+};
