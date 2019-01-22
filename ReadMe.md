@@ -31,7 +31,7 @@ Bamazon is a node application that is similar to amazon.
 
 1. Node.js must be installed (https://nodejs.org/en/download/)
 1. MySQL must be installed. (https://www.mysql.com/downloads/) 
-1. A MySQL developer tool such as MySQL Sequel (https://sequelpro.com/download) or Workbench (Pro (https://dev.mysql.com/downloads/workbench/) is needed to create and interacte with the database.
+1. A MySQL developer tool such as Sequel Pro (https://sequelpro.com/download) or MySQL Workbench (https://dev.mysql.com/downloads/workbench/) is needed to create and interact with the database.
 
 ### Installation
 
