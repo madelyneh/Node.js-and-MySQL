@@ -42,11 +42,11 @@ Bamazon is a node application that is similar to amazon.
 
 ## Bamazon Demo
 
-#### Customer side *bamazonCustomer.js*:
+#### Customer side:
 <br>
 ![Demo](/images/customerDemo.gif)
 
-#### Manager side *bamazonManager.js*:
+#### Manager side:
 <br>
 ![Demo](/images/managerDemo.gif)
 
