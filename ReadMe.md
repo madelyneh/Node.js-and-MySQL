@@ -10,12 +10,14 @@
 
 ## Bamazon Demo
 
-<!-- #### Customer side:
-<br> -->
+#### Customer side:
+
+
 ![Demo](/images/customerDemo.gif)
 
-<!-- #### Manager side:
-<br> -->
+#### Manager side:
+
+
 ![Demo](/images/managerDemo.gif)
 
 
