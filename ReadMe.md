@@ -3,11 +3,21 @@
 ### Table of Contents 
 - [Description](#Description)
 - [Getting Started](#Getting-started)
-- [Bamazon Demo](#Bamazon-Demo)
 - [Technologies](#Technologies)
 - [Contributor](#contributor)
 
 <br>
+
+## Bamazon Demo
+
+#### Customer side:
+<br>
+![Demo](/images/customerDemo.gif)
+
+#### Manager side:
+<br>
+![Demo](/images/managerDemo.gif)
+
 
 ## Description
 
@@ -39,16 +49,6 @@ Bamazon is a node application that is similar to amazon.
 2. Open a command line(terminal or CLI) session and navigate to where you cloned the repository.
 1. run `npm install` to install the dependencies
 1. Use the *mysql.sql* file to create the databases in MySQL
-
-## Bamazon Demo
-
-#### Customer side:
-<br>
-![Demo](/images/customerDemo.gif)
-
-#### Manager side:
-<br>
-![Demo](/images/managerDemo.gif)
 
 
 ## Technologies
