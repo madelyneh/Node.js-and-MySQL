@@ -15,6 +15,19 @@
 
 ## Description
 
+Bamazon is a node application that is similar to amazon. 
+
+* Customer side:
+  1. Customers are able to see all products that are in inventory.
+  2. Customers are able to purchase items, which will update the quantity in inventory
+
+* Manager side:
+  1. View all products in inventory 
+  2. View products with low inventory
+  3. Add quantity of an existing item to inventory
+  4. Add a new product to inventory
+  5. Exit the application
+
 
 ## Getting Started
 
@@ -22,10 +35,13 @@
 ## Using the Application
 
 
-## Demo
+## Demos
 
+
+Customer side:
 ![Demo](/images/customerDemo.gif)
 
+Manager side:
 ![Demo](/images/managerDemo.gif)
 
 
