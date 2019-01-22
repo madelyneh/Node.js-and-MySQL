@@ -3,8 +3,8 @@
 ### Table of Contents 
 - [Description](#Description)
 - [Getting Started](#Getting-started)
-- [Bamazon Demo](#Demo)
-- [Technologies](#Technical-Information)
+- [Bamazon Demo](#Bamazon-Demo)
+- [Technologies](#Technologies)
 - [Contributor](#contributor)
 
 <br>
