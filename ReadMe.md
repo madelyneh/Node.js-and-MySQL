@@ -39,9 +39,11 @@ Bamazon is a node application that is similar to amazon.
 
 
 Customer side:
+<hr>
 ![Demo](/images/customerDemo.gif)
 
 Manager side:
+<hr>
 ![Demo](/images/managerDemo.gif)
 
 
