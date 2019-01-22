@@ -1,17 +1,13 @@
 # Node.js & MySQL (Bamazon)
 
-<hr>
-
 ### Table of Contents 
 - [Description](#Description)
 - [Getting Started](#Getting-started)
-- [Using the Application](#Using-the-Application)
-- [Demo](#Demo)
-- [Technical Information](#Technical-Information)
+- [Bamazon Demo](#Demo)
+- [Technologies](#Technical-Information)
 - [Contributor](#contributor)
 
 <br>
-
 
 ## Description
 
@@ -31,28 +27,36 @@ Bamazon is a node application that is similar to amazon.
 
 ## Getting Started
 
+### Prerequsites
 
-## Using the Application
+1. Node.js must be installed (https://nodejs.org/en/download/)
+1. MySQL must be installed. (https://www.mysql.com/downloads/) 
+1. A MySQL developer tool such as MySQL Sequel (https://sequelpro.com/download) or Workbench (Pro (https://dev.mysql.com/downloads/workbench/) is needed to create and interacte with the database.
 
+### Installation
 
-## Demos
+1. Clone repository Node.js-and-MySQL using the code: `git clone https://github.com/madelyneh/Node.js-and-MySQL.git`
+2. Open a command line(terminal or CLI) session and navigate to where you cloned the repository.
+1. run `npm install` to install the dependencies
+1. Use the *mysql.sql* file to create the databases in MySQL
 
+## Bamazon Demo
 
-Customer side:
+#### Customer side (bamazonCustomer.js):
 <br>
 ![Demo](/images/customerDemo.gif)
 
-Manager side:
+#### Manager side (bamazonManager.js):
 <br>
 ![Demo](/images/managerDemo.gif)
 
 
-## Technical Information
+## Technologies
 
 - JavaScript
-- Node.js
+- Node.js (https://www.npmjs.com/package/node)
 - mysql (https://www.npmjs.com/package/node-mysql)
-- inquirer (https://www.npmjs.com/package/inquirer)
+- Inquirer (https://www.npmjs.com/package/inquirer)
 
 ## Contributor
 
